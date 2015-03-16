@@ -24,11 +24,11 @@ describe("Tag solver", function () {
     });
 
     it("should solve tag alone", function () {
-        expect(solver.solveSelector("div").string).toBe('<div></div>');
+        expect(solver.solveSelector("div", true).string).toBe('<div></div>');
     });
 
     it("should solve unknown tags", function () {
-        expect(solver.solveSelector("ceva").string).toBe('<ceva></ceva>');
+        expect(solver.solveSelector("ceva", true).string).toBe('<ceva></ceva>');
     });
 
     it("should solve tag with id", function () {
