@@ -1,0 +1,15 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Selector to Tag'
+      'submenu': [
+        {
+            'label': 'Solve selector',
+            'command': 'selector-to-tag:solve-selector'
+        }
+      ]
+    ]
+  }
+]
