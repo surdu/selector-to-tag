@@ -7,5 +7,5 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'atom-text-editor:not([mini])':
-  'ctrl+i': 'selector-to-tag:solve-selector'
+'.workspace atom-text-editor:not([mini])':
+  'tab': 'selector-to-tag:solve-selector'
