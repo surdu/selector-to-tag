@@ -3,6 +3,7 @@
 Selector to Tag is an Atom editor package that allows you to create HTML tag elements using CSS selectors in HTML files.
 
 Just type a CSS selector and press `TAB`:
+
 ![Demo animation](demo.gif)
 
 ## Options
@@ -18,4 +19,4 @@ For now the following selectors
  - \#id
  - .class
 
- If you have any sugesstions for other selectors or sugestions in general, please submit an issue.
+If you have any sugesstions for other selectors or sugestions in general, please submit an issue.
