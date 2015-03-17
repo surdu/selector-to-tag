@@ -3,7 +3,7 @@
   "main": "./lib/main",
   "version": "0.0.0",
   "description": "Create HTML tag elements using CSS selectors in HTML files",
-  "repository": "https://github.com/postal2600/selector-to-tag",
+  "repository": "https://github.com/surdu/selector-to-tag",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
