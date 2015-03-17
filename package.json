@@ -1,7 +1,7 @@
 {
   "name": "selector-to-tag",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create HTML tag elements using CSS selectors in HTML files",
   "repository": "https://github.com/surdu/selector-to-tag",
   "license": "MIT",
