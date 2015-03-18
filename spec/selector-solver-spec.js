@@ -42,4 +42,9 @@ describe("Tag solver", function () {
     it("should solve tag with id and multiple classes", function () {
         expect(solver.solveSelector("div#mama.tata.sora").string).toBe('<div id="mama" class="tata sora"></div>');
     });
+
+    it("should solve selectors with - and _", function () {
+        expect(solver.solveSelector("some-tag_1#id-1_2.class_1.class-2").string).toBe('<some-tag_1 id="id-1_2" class="class_1 class-2"></some-tag_1>');
+    });
+
 })
