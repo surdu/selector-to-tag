@@ -43,8 +43,16 @@ describe("Tag solver", function () {
         expect(solver.solveSelector("div#mama.tata.sora").string).toBe('<div id="mama" class="tata sora"></div>');
     });
 
-    it("should solve selectors with - and _", function () {
+    it("should solve selectors containing - and _", function () {
         expect(solver.solveSelector("some-tag_1#id-1_2.class_1.class-2").string).toBe('<some-tag_1 id="id-1_2" class="class_1 class-2"></some-tag_1>');
+    });
+
+    it("should solve self-closing tags", function () {
+        expect(solver.solveSelector("link", true).string).toBe('<link>');
+    });
+
+    it("should close self-closing tags", function () {
+        expect(solver.solveSelector("link", true, true).string).toBe('<link/>');
     });
 
 })

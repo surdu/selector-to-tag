@@ -12,6 +12,9 @@ Just type a CSS selector and press `TAB`:
 
  - **Solve Tags** - this will indicate if this package should also solve tags when there is no id or class specified. When this is activated it will basically override the default `html-language` package, so you could disable that package. *(Default: true)*
 
+ - **Close self-closing tags** - Add a backslash before the end of self-closing tags. For example `<link>` will be solved to `<link/>` *(Default: false)*
+
+
 ## Supported selectors
 
 For now the following selectors
