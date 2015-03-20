@@ -1,3 +1,8 @@
+## 0.2.1
+
+- Fixed bug where starting a tag with dash (`-`) will crash the package
+- Removed menu entry from Packages
+
 ## 0.2.0
 
 - Added option to close self-closing tags
