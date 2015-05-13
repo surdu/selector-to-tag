@@ -55,9 +55,7 @@ describe("Tag solver", function () {
     expect(solver.solveSelector("link", true, true).string).toBe('<link/>');
   });
 
-  describe("when expandBlockTags is true", function () {
-    it("should expand a div tag to multiple lines", function () {
-      expect(solver.solveSelector("div#mama", true, true, true).string).toBe('<div id="mama">\n\n</div>');
-    });
+  it("should expand block tags to multiple lines", function () {
+    expect(solver.solveSelector("div#mama", true, true, true, ['div']).string).toBe('<div id="mama">\n\n</div>');
   });
 })
