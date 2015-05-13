@@ -1,6 +1,6 @@
-## HEAD
+## 0.3.1
 
-- Added option to expand block tags to multiple lines.
+- Added option to expand block tags to multiple lines. (thanks @dsandstrom)
 
 ## 0.2.1
 
