@@ -1,3 +1,7 @@
+## HEAD
+
+- Added option to expand block tags to multiple lines.
+
 ## 0.2.1
 
 - Fixed bug where starting a tag with dash (`-`) will crash the package

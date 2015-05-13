@@ -54,4 +54,8 @@ describe("Tag solver", function () {
   it("should close self-closing tags", function () {
     expect(solver.solveSelector("link", true, true).string).toBe('<link/>');
   });
+
+  it("should expand block tags to multiple lines", function () {
+    expect(solver.solveSelector("div#mama", true, true, true, ['div']).string).toBe('<div id="mama">\n\n</div>');
+  });
 })
