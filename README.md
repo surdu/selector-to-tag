@@ -14,6 +14,10 @@ Just type a CSS selector and press `TAB`:
 
  - **Close self-closing tags** - Add a backslash before the end of self-closing tags. For example `<link>` will be solved to `<link/>` *(Default: false)*
 
+ - **Expand block tags to multiple lines** - Puts the cursor and end tag on new lines. *(Default: false)*
+
+ - **Block-level elements** - If "Expand block tags to multiple lines" is checked, these tags will count as block tags. *(Default: address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video)*
+
 
 ## Supported selectors
 
@@ -22,4 +26,4 @@ For now the following selectors
  - \#id
  - .class
 
-If you have any sugesstions for other selectors or sugestions in general, please submit an issue.
+If you have any sugestions for other selectors or sugestions in general, please submit an issue.
