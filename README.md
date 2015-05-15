@@ -2,9 +2,24 @@
 
 Selector to Tag is an Atom editor package that allows you to create HTML tag elements using CSS selectors in HTML files.
 
-Just type a CSS selector and press `TAB`:
+Just type a CSS selector and press <kbd>TAB</kbd> :
 
 ![Demo animation](https://cloud.githubusercontent.com/assets/11520795/6700058/1b18986a-cd11-11e4-9d6a-848b808197c6.gif)
+
+## Supported selectors
+
+For now the following selectors are possible:
+
+Selector          | Output
+------------------|------
+`foo`             | `<foo></foo>`
+`foo#bar`         | `<foo id="bar"></foo>`
+`#foo`            | `<div id="foo"></div>`
+`.foo`            | `<div class="foo"></div>`
+`foo.bar`         | `<foo class="bar"></foo>`
+`foo.bar.baz`     | `<foo class="bar baz"></foo>`
+`foo#bar.baz`     | `<foo id="bar" class="baz"></foo>`
+`foo#bar.baz.qux` | `<foo id="bar" class="baz qux"></foo>`
 
 ## Options
 
@@ -18,12 +33,6 @@ Just type a CSS selector and press `TAB`:
 
  - **Block-level elements** - If "Expand block tags to multiple lines" is checked, these tags will count as block tags. *(Default: address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video)*
 
+##Support
 
-## Supported selectors
-
-For now the following selectors
- - tag
- - \#id
- - .class
-
-If you have any sugestions for other selectors or sugestions in general, please submit an issue.
+If you have any sugestions for other selectors or sugestions in general, please submit an issue on GitHub.

@@ -1,6 +1,7 @@
 ## HEAD
 
-- Fixed not expanding if tag ends in dot (for example "div.")
+- Added: now you can use only the id or class to expand to a div with that class and/or id
+- Fixed: not expanding if tag ends in dot (for example "div.")
 
 ## 0.3.1
 
