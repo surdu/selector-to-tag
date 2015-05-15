@@ -58,4 +58,9 @@ describe("Tag solver", function () {
   it("should expand block tags to multiple lines", function () {
     expect(solver.solveSelector("div#mama", true, true, true, ['div']).string).toBe('<div id="mama">\n\n</div>');
   });
+
+  it("shouldn't expand tag if class is not specified", function () {
+    expect(solver.solveSelector("div.")).toBe(null);
+  });
+
 })

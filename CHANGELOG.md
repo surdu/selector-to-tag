@@ -1,3 +1,7 @@
+## HEAD
+
+- Fixed not expanding if tag ends in dot (for example "div.")
+
 ## 0.3.1
 
 - Added option to expand block tags to multiple lines. (thanks @dsandstrom)
