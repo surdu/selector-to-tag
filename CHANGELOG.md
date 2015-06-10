@@ -1,3 +1,7 @@
+ ## 0.4.1
+
+- Fixed: prevent expending to div from nothing
+
 ## 0.4.0
 
 - Added: now you can use only the id or class to expand to a div with that class and/or id

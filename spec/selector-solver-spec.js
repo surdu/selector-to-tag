@@ -60,12 +60,16 @@ describe("Tag solver", function () {
 	});
 
 	it("shouldn't expand tag if class or id is not specified", function () {
-		expect(solver.solveSelector("div#")).toBe(null);
-		expect(solver.solveSelector("div.")).toBe(null);
+		expect(solver.solveSelector("div#")).toBeNull();
+		expect(solver.solveSelector("div.")).toBeNull();
 	});
 
 	it("should solve to div if only class or id specified", function () {
 		expect(solver.solveSelector(".mama").string).toBe('<div class="mama"></div>');
 		expect(solver.solveSelector("#tata").string).toBe('<div id="tata"></div>');
 	});
-})
+
+	it("should not solve to div if nothing is specified", function () {
+		expect(solver.solveSelector("", true)).toBeNull();
+	});
+});
