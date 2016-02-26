@@ -1,4 +1,15 @@
 var SelectorSolver = require("../lib/selector-solver");
+var path = require('path');
+var fs = require('fs');
+
+function readExpected(file) {
+	return fs.readFileSync(path.join(__dirname, "./fixtures/after", file), "utf8");
+}
+
+function pressTab(editorView) {
+	var event = keydownEvent("tab", {target: editorView});
+	atom.keymaps.handleKeyboardEvent(event.originalEvent);
+}
 
 describe("HTML detector", function () {
 	var solver;
@@ -14,6 +25,46 @@ describe("HTML detector", function () {
 	it("should detect HTML files", function () {
 		expect(solver.isHTML("test.HTML")).toBe(true);
 	});
+});
+
+describe("Tag solver2", function () {
+	var editor;
+	var editorView;
+
+	beforeEach(function () {
+
+		waitsForPromise(function () {
+			return atom.packages.activatePackage("selector-to-tab");
+		});
+
+		waitsForPromise(function () {
+			return atom.packages.activatePackage("snippets");
+		});
+
+		waitsForPromise(function () {
+			return atom.packages.activatePackage("language-html", {sync: true});
+		});
+
+	});
+
+	runs(function () {
+		alert("aici!")
+		editor = atom.workspace.getActiveTextEditor();
+		editorView = atom.views.getView(editor);
+	});
+
+	it("should solve block tags", function () {
+		waitsForPromise(function () {
+			return atom.workspace.open("before/blockTag.html");
+		});
+
+		pressTab(editorView);
+
+		var expected = readExpected("blockTag.html");
+
+		expect(editor.getText()).toBe(expected);
+	});
+
 });
 
 describe("Tag solver", function () {
