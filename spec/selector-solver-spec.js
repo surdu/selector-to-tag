@@ -7,8 +7,9 @@ function readExpected(file) {
 }
 
 function pressTab(editorView) {
-	var event = keydownEvent("tab", {target: editorView});
-	atom.keymaps.handleKeyboardEvent(event.originalEvent);
+	var event = atom.keymaps.constructor.buildKeydownEvent("tab", {target: editorView});
+	console.log("event:", event);
+	atom.keymaps.handleKeyboardEvent(event);
 }
 
 describe("HTML detector", function () {
@@ -34,7 +35,7 @@ describe("Tag solver2", function () {
 	beforeEach(function () {
 
 		waitsForPromise(function () {
-			return atom.packages.activatePackage("selector-to-tab");
+			return atom.workspace.open('test.html');
 		});
 
 		waitsForPromise(function () {
@@ -45,24 +46,25 @@ describe("Tag solver2", function () {
 			return atom.packages.activatePackage("language-html", {sync: true});
 		});
 
-	});
-
-	runs(function () {
-		alert("aici!")
-		editor = atom.workspace.getActiveTextEditor();
-		editorView = atom.views.getView(editor);
-	});
-
-	it("should solve block tags", function () {
 		waitsForPromise(function () {
-			return atom.workspace.open("before/blockTag.html");
+			return atom.packages.activatePackage("selector-to-tag");
 		});
 
+		runs(function () {
+			editor = atom.workspace.getActiveTextEditor();
+			editorView = atom.views.getView(editor);
+		});
+	});
+
+
+	it("should solve block tags", function () {
+
+		editor.setText("div");
+		editor.moveToEndOfLine();
+		console.log();
 		pressTab(editorView);
 
-		var expected = readExpected("blockTag.html");
-
-		expect(editor.getText()).toBe(expected);
+		expect(editor.getText()).toBe("<div></div>");
 	});
 
 });
