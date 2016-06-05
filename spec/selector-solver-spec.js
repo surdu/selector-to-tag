@@ -117,5 +117,8 @@ describe("selector-to-tab", function () {
 			testSelector("", '');
 		});
 
+		it("should not create tags from invalid strings", function () {
+			testSelector("42", '42');
+		});
 	});
 });
