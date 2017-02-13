@@ -120,5 +120,9 @@ describe("selector-to-tab", function () {
 		it("should not create tags from invalid strings", function () {
 			testSelector("42", '42');
 		});
+
+		it("should remember tag's case", function () {
+			testSelector("View", '<View></View>');
+		});
 	});
 });
