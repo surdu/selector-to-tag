@@ -1,17 +1,11 @@
+"use strict";
+
 var SelectorSolver = require("../lib/selector-solver");
-var path = require('path');
-var fs = require('fs');
 
 describe("selector-to-tab", function () {
 
 	var editor;
 	var editorView;
-	var workspaceElement;
-
-	function pressTab() {
-		var event = atom.keymaps.constructor.buildKeydownEvent("tab", {target: editorView});
-		atom.keymaps.handleKeyboardEvent(event);
-	}
 
 	function testSelector(selector, expected, expectedCurPos) {
 		editor.setText(selector);

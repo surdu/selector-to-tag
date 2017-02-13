@@ -1,0 +1,7 @@
+{
+	"extends": "../.jshintrc",
+	"jasmine": true,
+	"globals": {
+		"waitsForPromise": false
+	}
+}
