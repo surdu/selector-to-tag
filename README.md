@@ -25,6 +25,8 @@ Selector          | Output
 
  - **File extensions** - comma separated file extensions in which this package should be active *(Default: "htm, html, kit, shtml, tmpl, tpl, xhtml")*
 
+ - **Only on HTML grammar** - extension solves tags in any file that have the HTML grammar active. `File extensions` option will be ignored if this is enabled
+
  - **Solve Tags** - this will indicate if this package should also solve tags when there is no id or class specified. When this is activated it will basically override the default `html-language` package, so you could disable that package. *(Default: true)*
 
  - **Close self-closing tags** - Add a backslash before the end of self-closing tags. For example `<link>` will be solved to `<link/>` *(Default: false)*
