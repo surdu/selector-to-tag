@@ -12,7 +12,7 @@ For now the following selectors are possible:
 
 Selector          | Output
 ------------------|------
-`foo`             | `<foo></foo>`
+`foo`             | `<foo></foo>` (when `Solve Plain Tags` option is enabled (default `true`))
 `foo#bar`         | `<foo id="bar"></foo>`
 `#foo`            | `<div id="foo"></div>`
 `.foo`            | `<div class="foo"></div>`
@@ -23,17 +23,17 @@ Selector          | Output
 
 ## Options
 
- - **File extensions** - comma separated file extensions in which this package should be active *(Default: "htm, html, kit, shtml, tmpl, tpl, xhtml")*
+ - **File Extensions** - comma separated file extensions in which this package should be active *(Default: "htm, html, kit, shtml, tmpl, tpl, xhtml")*
 
- - **Only on HTML grammar** - extension solves tags in any file that have the HTML grammar active. `File extensions` option will be ignored if this is enabled
+ - **Only On HTML Grammar** - extension solves tags in any file that have the HTML grammar active. `File extensions` option will be ignored if this is enabled *(Default: false)*
 
- - **Solve Tags** - this will indicate if this package should also solve tags when there is no id or class specified. When this is activated it will basically override the default `html-language` package, so you could disable that package. *(Default: true)*
+ - **Solve Plain Tags** - this will indicate if this package should also solve to tags when there is no id or class specified in the selector. *(Default: true)*
 
- - **Close self-closing tags** - Add a backslash before the end of self-closing tags. For example `<link>` will be solved to `<link/>` *(Default: false)*
+ - **Close Self-Closing Tags** - Add a backslash before the end of self-closing tags. For example `<link>` will be solved to `<link/>` *(Default: false)*
 
- - **Expand block tags to multiple lines** - Puts the cursor and end tag on new lines. *(Default: false)*
+ - **Expand Block Tags To Multiple Lines** - Puts the cursor and end tag on new lines. *(Default: false)*
 
- - **Block-level elements** - If "Expand block tags to multiple lines" is checked, these tags will count as block tags. *(Default: address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, header, hgroup, hr, main, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video)*
+ - **Block-Level Elements** - If "Expand block tags to multiple lines" is checked, these tags will count as block tags. *(Default: address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, header, hgroup, hr, main, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video)*
 
 ##Support
 
