@@ -6,6 +6,8 @@ Just type a CSS selector and press <kbd>TAB</kbd> :
 
 ![Demo animation](https://cloud.githubusercontent.com/assets/11520795/6700058/1b18986a-cd11-11e4-9d6a-848b808197c6.gif)
 
+![Demo animation 2](https://cloud.githubusercontent.com/assets/865165/26415100/5137ad08-407f-11e7-8de0-d60f6453485b.gif)
+
 ## Supported selectors
 
 For now the following selectors are possible:
