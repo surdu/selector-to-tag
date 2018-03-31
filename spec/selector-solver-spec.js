@@ -1,6 +1,6 @@
-"use strict";
+/* globals atom, waitsForPromise */
 
-var SelectorSolver = require("../lib/selector-solver");
+const SelectorSolver = require("../lib/selector-solver");
 
 describe("selector-to-tab", function () {
 
@@ -21,7 +21,6 @@ describe("selector-to-tab", function () {
 	}
 
 	beforeEach(function () {
-
 		waitsForPromise(function () {
 			return atom.workspace.open('test.html');
 		});
@@ -32,6 +31,7 @@ describe("selector-to-tab", function () {
 
 		runs(function () {
 			editor = atom.workspace.getActiveTextEditor();
+			editor.setText("");
 			editorView = atom.views.getView(editor);
 		});
 	});
@@ -117,6 +117,14 @@ describe("selector-to-tab", function () {
 
 		it("should remember tag's case", function () {
 			testSelector("View", '<View></View>');
+		});
+
+		it("should not solve unless a full valid selector precedes", function() {
+			editor.setText('<input type="button" name="name" value="">');
+			editor.setCursorScreenPosition([0, 19]);
+			atom.commands.dispatch(editorView, 'selector-to-tag:solve-selector');
+
+			expect(editor.getText()).toBe('<input type="button" name="name" value="">');
 		});
 	});
 });

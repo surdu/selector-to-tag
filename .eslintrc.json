@@ -1,0 +1,31 @@
+{
+	"extends": [
+		"eslint:recommended"
+	],
+
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true
+		}
+	},
+
+	"env": {
+		"node": true,
+		"es6": true
+	},
+
+	"globals": {
+		"android": false,
+		"com": false
+	},
+
+	"rules": {
+		"eqeqeq": "error",
+		"block-scoped-var": "error",
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"semi": "error",
+		"no-console": ["error", {"allow": ["error", "info"]}]
+	}
+}
