@@ -126,5 +126,9 @@ describe("selector-to-tab", function () {
 
 			expect(editor.getText()).toBe('<input type="button" name="name" value="">');
 		});
+
+		it("should solve tags with a namespace prefix", function () {
+			testSelector("ns:View", '<ns:View></ns:View>');
+		});
 	});
 });
