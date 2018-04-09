@@ -1,8 +1,9 @@
 language: objective-c
 
-notifications:
-  email:
-    on_success: never
-    on_failure: change
+install:
+  - nvm install node
+  - npm i -g eslint
 
-script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+script:
+  - eslint **/*.js
+  - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
