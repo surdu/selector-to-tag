@@ -2,8 +2,7 @@ language: objective-c
 
 install:
   - nvm install node
-  - npm i -g eslint
 
 script:
-  - eslint **/*.js
+  - npm test
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'

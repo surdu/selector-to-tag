@@ -8,10 +8,16 @@
   "engines": {
     "atom": ">0.50.0"
   },
+  "scripts": {
+    "test": "npx eslint **/*.js"
+  },
   "keywords": [
     "html",
     "css",
     "web development",
     "solve tags"
-  ]
+  ],
+  "dependencies": {
+    "eslint": "^5.0.1"
+  }
 }

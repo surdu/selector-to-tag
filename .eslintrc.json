@@ -17,7 +17,7 @@
 	},
 
 	"globals": {
-		"android": false,
+		"atom": false,
 		"com": false
 	},
 

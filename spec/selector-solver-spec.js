@@ -119,7 +119,7 @@ describe("selector-to-tab", function () {
 			testSelector("View", '<View></View>');
 		});
 
-		it("should not solve unless a full valid selector precedes", function() {
+		it("should not solve tags if inside another tag", function() {
 			editor.setText('<input type="button" name="name" value="">');
 			editor.setCursorScreenPosition([0, 19]);
 			atom.commands.dispatch(editorView, 'selector-to-tag:solve-selector');
