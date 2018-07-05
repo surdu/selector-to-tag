@@ -17,7 +17,7 @@
     "web development",
     "solve tags"
   ],
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^5.0.1"
   }
 }

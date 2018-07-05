@@ -1,4 +1,6 @@
-# Selector to Tag [![Build Status](https://travis-ci.org/surdu/selector-to-tag.svg?branch=master)](https://travis-ci.org/surdu/selector-to-tag)
+# Selector to Tag
+
+[![Build Status](https://travis-ci.org/surdu/selector-to-tag.svg?branch=master)](https://travis-ci.org/surdu/selector-to-tag)
 
 Selector to Tag is an [Atom editor](https://atom.io/) package that allows you to create HTML tag elements using CSS selectors in HTML files.
 
