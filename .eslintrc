@@ -1,6 +1,7 @@
 {
 	"extends": [
-		"eslint:recommended"
+		"eslint:recommended",
+		"plugin:prettier/recommended"
 	],
 
 	"parserOptions": {
@@ -13,6 +14,7 @@
 
 	"env": {
 		"node": true,
+		"browser": true,
 		"es6": true
 	},
 
@@ -26,6 +28,9 @@
 		"block-scoped-var": "error",
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 		"semi": "error",
-		"no-console": ["error", {"allow": ["error", "info"]}]
+		"no-console": ["error", {"allow": ["error", "info"]}],
+		"prettier/prettier": ["error", {
+			"useTabs": true
+		}]
 	}
 }
