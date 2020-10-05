@@ -1,8 +1,0 @@
-language: objective-c
-
-install:
-  - nvm install node
-
-script:
-  - npm test
-  - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
