@@ -19,5 +19,12 @@
   ],
   "devDependencies": {
     "eslint": "^5.0.1"
+  },
+  "consumedServices": {
+    "snippets": {
+      "versions": {
+        "0.1.0": "consumeSnippets"
+      }
+    }
   }
 }
