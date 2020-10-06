@@ -1,6 +1,7 @@
 # Selector to Tag
 
-[![Build Status](https://travis-ci.org/surdu/selector-to-tag.svg?branch=master)](https://travis-ci.org/surdu/selector-to-tag)
+[![Actions Status](https://github.com/surdu/selector-to-tag/workflows/Tests/badge.svg)](https://github.com/surdu/selector-to-tag/actions)
+[![Buy me a coffee](https://raw.githubusercontent.com/surdu/surdu/master/ko-fi.svg)](https://ko-fi.com/surdu)
 
 Selector to Tag is an [Atom editor](https://atom.io/) package that allows you to create HTML tag elements using CSS selectors in HTML files.
 
@@ -37,6 +38,6 @@ Selector          | Output
 
  - **Block-Level Elements** - If "Expand block tags to multiple lines" is checked, these tags will count as block tags. *(Default: address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, header, hgroup, hr, main, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video)*
 
-##Support
+## Support
 
 If you have any sugestions for other selectors or sugestions in general, please submit an issue on GitHub.
